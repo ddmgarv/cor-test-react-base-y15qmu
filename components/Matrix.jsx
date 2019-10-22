@@ -2,53 +2,54 @@ import React from "react";
 
 const Matrix = ({ matrix }) => {
   const countOIE = () => {
-    console.log(matrix);
+    let counter = 0;
     for (let y = 0; y < matrix.length; y++) {
       for (let x = 0; x < matrix[y].length; x++) {
         if (matrix[y][x] == "O") {
           try {
             if (matrix[y][x + 1] == "I" && matrix[y][x + 2] == "E") {
-              console.log("found something");
+              counter++;
             }
           } catch (error) {}
           try {
             if (matrix[y + 1][x + 1] == "I" && matrix[y + 2][x + 2] == "E") {
-              console.log("found something");
+              counter++;
             }
           } catch (error) {}
           try {
             if (matrix[y + 1][x] == "I" && matrix[y + 2][x] == "E") {
-              console.log("found something");
+              counter++;
             }
           } catch (error) {}
           try {
             if (matrix[y + 1][x - 1] == "I" && matrix[y + 2][x - 2] == "E") {
-              console.log("found something");
+              counter++;
             }
           } catch (error) {}
           try {
             if (matrix[y][x - 1] == "I" && matrix[y][x - 2] == "E") {
-              console.log("found something");
+              counter++;
             }
           } catch (error) {}
           try {
             if (matrix[y - 1][x - 1] == "I" && matrix[y - 2][x - 2] == "E") {
-              console.log("found something");
+              counter++;
             }
           } catch (error) {}
           try {
             if (matrix[y - 1][x] == "I" && matrix[y - 2][x] == "E") {
-              console.log("found something");
+              counter++;
             }
           } catch (error) {}
           try {
             if (matrix[y - 1][x + 1] == "I" && matrix[y - 2][x + 2] == "E") {
-              console.log("found something");
+              counter++;
             }
           } catch (error) {}
         }
       }
     }
+    alert(counter);
   };
   return (
     <div className="matrix">
