@@ -8,7 +8,6 @@ class ShowMatrices extends Component {
 
   async componentDidMount() {
     const data = await getResources();
-    console.log(data);
     this.setState({
       matrices: data
     });
@@ -18,7 +17,10 @@ class ShowMatrices extends Component {
     return (
       <div className="matrices-container">
         {this.state.matrices.map((matrix, index) => (
-          <Matrix key={index} matrix={matrix} />
+          <Matrix
+            key={index}
+            matrix={matrix}
+          />
         ))}
       </div>
     );
