@@ -1,3 +1,14 @@
 h1, p {
   font-family: Lato;
 }
+
+.matrices-container {
+  display:flex;
+  justify-content:space-between;
+}
+.row-container{
+  width: 100px;
+}
+.letter{
+  width: 10px;
+}
