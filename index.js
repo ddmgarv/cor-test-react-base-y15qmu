@@ -8,7 +8,9 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      name: 'COR'
+      name: 'COR',
+      myname: "Gustavo Adolfo Rojas Villarroel",
+      number: 1166281998
     };
   }
 
@@ -17,6 +19,8 @@ class App extends Component {
       <div>
         <Hello name={this.state.name} />
         <h4>Sopa de letras - Test para entrevista FRONT-END</h4>
+        <h1>Hecho por: {this.state.myname} </h1>
+        <h1>Número: 1166281998</h1>
         <p>
           Se requiere hacer un <i>component</i> que segun un archivo json con unas matrices, este muestre cuantas veces aparece la palabra "OIE" dentro de ella, ya sea horizontalmente, verticalmente, o en diagonal. (En total, hay que comprobar 8 sentidos diferentes.)
         </p>
